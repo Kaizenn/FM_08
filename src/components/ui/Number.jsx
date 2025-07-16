@@ -18,7 +18,7 @@ export default function Number({ number }) {
         height: '6rem',
         scrollTrigger: {
           trigger: numberBgRef.current,
-          start: 'bottom 100%',
+          end: 'bottom 50%',
           toggleActions: 'play none none none',
           scrub: true,
         },
@@ -36,7 +36,7 @@ export default function Number({ number }) {
           height: '8rem',
           scrollTrigger: {
             trigger: numberBg2Ref.current,
-            start: 'bottom 75%',
+            start: 'start 100%',
             toggleActions: 'play none none none',
             scrub: true,
           },
