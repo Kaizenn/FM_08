@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('./assets/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 600, 800, 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-white: #fafafa;
+
+  --color-cyan-300: #8fe3f9;
+  --color-cyan-600: #4d96a9;
+
+  --color-purple-300: #d9b8ff;
+  --color-purple-600: #855fb1;
+
+  --color-slate-300: #d1d1df;
+  --color-slate-600: #87879d;
+  --color-slate-900: #28283d;
+
+  --font-primary: 'Red Hat Display', sans-serif;
+}
+
+@layer utilities {
+  .text-preset1 {
+    font-size: clamp(2.85rem, 2.0714rem + 2.1429vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: 900;
+  }
+  .text-preset2 {
+    font-size: clamp(2.1rem, 1.8571rem + 0.7143vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+    font-weight: 900;
+  }
+  .text-preset3 {
+    font-size: clamp(0.8rem, 0.6786rem + 0.3571vw, 1rem);
+    line-height: 1.1;
+    letter-spacing: 4px;
+    font-weight: 900;
+  }
+  .text-preset4 {
+    font-size: clamp(1.1rem, 0.9643rem + 0.1786vw, 1.125rem);
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: 600;
+  }
+  .text-preset5 {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-weight: 800;
+  }
+}
+
+:root {
+  --main-bg-color: #fafafa;
+  background-color: var(--main-bg-color);
+  font-family: var(--font-primary);
+  color: var(--color-slate-600);
+  background: #8fe3f9;
+  background: linear-gradient(
+    150deg,
+    rgba(143, 227, 249, 0.5) 0%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(217, 184, 255, 0.5) 100%
+  );
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-cyan-600);
+  z-index: 9999;
+
+  --hole-radius: 0;
+
+  mask-image: radial-gradient(
+    circle var(--hole-radius) at left center,
+    transparent 0,
+    transparent var(--hole-radius),
+    black calc(var(--hole-radius) + 1px)
+  );
+  -webkit-mask-image: radial-gradient(
+    circle var(--hole-radius) at left center,
+    transparent 0,
+    transparent var(--hole-radius),
+    black calc(var(--hole-radius) + 1px)
+  );
+}
