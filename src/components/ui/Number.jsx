@@ -14,11 +14,11 @@ export default function Number({ number }) {
       },
       {
         ease: 'expoScale(0.5,7,none)',
-        width: '6rem',
-        height: '6rem',
+        width: '7rem',
+        height: '7rem',
         scrollTrigger: {
           trigger: numberBgRef.current,
-          end: 'bottom 50%',
+          end: 'bottom 30%',
           toggleActions: 'play none none none',
           scrub: true,
         },
@@ -36,7 +36,7 @@ export default function Number({ number }) {
           height: '8rem',
           scrollTrigger: {
             trigger: numberBg2Ref.current,
-            start: 'start 100%',
+            end: 'bottom 20%',
             toggleActions: 'play none none none',
             scrub: true,
           },
